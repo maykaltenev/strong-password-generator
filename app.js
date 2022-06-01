@@ -5,25 +5,22 @@ let number = '0123456789';
 
 let divPassword = document.querySelector('#password');
 let button = document.querySelector('#btn');
-let input = document.querySelector('#myNumber');
-let inputValue = input.value;
+// let inputValue = document.getElementById("domTextElement").value;
+// document.getElementById("valueInput").innerHTML = inputValue;
+
 let body = document.querySelector('body');
 let main = document.querySelector('main')
 let container = document.querySelector('.container');
 let text = document.querySelectorAll('.text');
 
-// console.log(inputValue)
-// console.log(password)
-// let inputValue = (input.value);
-
 const randomPassword = () => {
     let result = [];
-    // if (input < 8) {
+    // if (inputValue < 8) {
     //     return `Password is too short please provide a number between 8 and 20!`;
-    // } else if (input > 20) {
+    // } else if (inputValue > 20) {
     //     return `Password is too long please provide a number between 8 and 20!`
     // } else {
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 10; i++) {
         if (i % 2 === 0) {
             result.push(capitalLetters[Math.floor(Math.random() * capitalLetters.length)])
         } else if (i % 3 === 0) {
@@ -34,9 +31,11 @@ const randomPassword = () => {
             result.push(number[Math.floor(Math.random() * number.length)]);
         }
     }
+
     divPassword.innerHTML = result.reverse().join('');
     return result.reverse().join('');
 }
+
 body.style.background = '#038C8C';
 body.style.display = 'flex';
 body.style.width = '100vw';
