@@ -2,17 +2,22 @@ let symbols = ' !\"#$%&\'() * +\,-\.\/: ;<=>\?\@\[\]^ _\`{\|}~';
 let smallLetters = 'abcdefghijklmnopqrstuvwxyz';
 let capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let number = '0123456789';
-
 let divPassword = document.querySelector('#password');
 let button = document.querySelector('#btn');
-// let inputValue = document.getElementById("domTextElement").value;
-// document.getElementById("valueInput").innerHTML = inputValue;
 
+// document.getElementById("valueInput").innerHTML = inputValue;
+let submit = document.querySelector("input[type='submit']");
 let body = document.querySelector('body');
 let main = document.querySelector('main')
 let container = document.querySelector('.container');
 let text = document.querySelectorAll('.text');
 
+// submit.addEventListener('click', () => {
+//     some = document.getElementById("domTextElement").value;
+//     console.log(some)
+// })
+
+// console.log(some);
 const randomPassword = () => {
     let result = [];
     // if (inputValue < 8) {
@@ -80,3 +85,4 @@ button.style.background = '#6B00DE'
 button.style.boxShadow = '0px 0px 5px white'
 
 button.addEventListener('click', randomPassword)
+
